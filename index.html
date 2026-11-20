@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Warship Duo is a two-player, fully offline naval guessing game for iPhone. Fold a foldable iPhone for private panes, or pass and play on any iPhone.">
+  <title>Warship Duo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="mark" href="index.html">Warship Duo</a>
+      <nav aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:support@warshipduo.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">A two-player naval guessing game</p>
+          <h1>Private fleets. One device. No connection required.</h1>
+          <p class="lede">Warship Duo is an original, fully offline game for two people at the same iPhone. Place a custom fleet on a 9×9 grid, then take turns calling shots — without accounts, ads, or a network.</p>
+          <p class="coming">Coming soon to the App Store</p>
+        </div>
+        <div class="hero-panel" aria-hidden="true">
+          <div class="grid-preview">
+            <div class="grid-label">9×9 theater</div>
+            <div class="cells"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="modes">
+      <div class="wrap">
+        <h2>Two ways to play</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Folded play</h3>
+            <p>On a foldable iPhone, fold the device to about 90 degrees. Warship Duo uses the system’s two-pane arrangement so each player can keep their own fleet private on their own pane.</p>
+          </article>
+          <article class="card">
+            <h3>Pass and play</h3>
+            <p>On any iPhone, including models without a fold, pass the device between turns. A full-screen privacy cover hides the boards until the next player is ready.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="notes">
+      <div class="wrap narrow">
+        <h2>Honest and offline</h2>
+        <p>The game is two-player only and stays on the device. It does not include online matchmaking, accounts, or analytics. The fleet and rules are original — a 9×9 grid and invented vessel names — so this is not a licensed edition of any other naval game.</p>
+        <p>Questions: <a href="mailto:support@warshipduo.com">support@warshipduo.com</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 Warship Duo</p>
+      <p><a href="privacy.html">Privacy</a> · <a href="mailto:support@warshipduo.com">support@warshipduo.com</a></p>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var root = document.querySelector(".cells");
+      if (!root) return;
+      for (var i = 0; i < 81; i++) {
+        var d = document.createElement("div");
+        d.className = "cell";
+        if ([12, 21, 30, 39, 48, 44, 45, 46, 16, 17, 25].indexOf(i) !== -1) d.classList.add("filled");
+        root.appendChild(d);
+      }
+    })();
+  </script>
+</body>
+</html>
